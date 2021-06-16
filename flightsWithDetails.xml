@@ -1,0 +1,156 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<flights>
+  <flight>
+    <price>750</price>
+    <flightCode>A134DS</flightCode>
+    <availableSeats>40</availableSeats>
+    <planeType>BOEING 777</planeType>
+    <departureDate>Apr 11, 2018</departureDate>
+    <OrIgInATION>MUA</OrIgInATION>
+    <airlineName>Delta</airlineName>
+    <destination>
+      <airportName>Los Angeles International Airport</airportName>
+      <city>Los Angeles</city>
+      <IATA>LAX</IATA>
+      <latitude>-118.408</latitude>
+      <altitude>125.000</altitude>
+      <longitude>33.943</longitude>
+    </destination>
+  </flight>
+  <flight>
+    <price>496</price>
+    <flightCode>A1QWER</flightCode>
+    <availableSeats>18</availableSeats>
+    <planeType>BOEING 747</planeType>
+    <departureDate>Aug 11, 2018</departureDate>
+    <OrIgInATION>MUA</OrIgInATION>
+    <airlineName>Delta</airlineName>
+    <destination>
+      <airportName>Los Angeles International Airport</airportName>
+      <city>Los Angeles</city>
+      <IATA>LAX</IATA>
+      <latitude>-118.408</latitude>
+      <altitude>125.000</altitude>
+      <longitude>33.943</longitude>
+    </destination>
+  </flight>
+  <flight>
+    <price>199.99</price>
+    <flightCode>A1B2C4</flightCode>
+    <availableSeats>10</availableSeats>
+    <planeType>BOEING 737</planeType>
+    <departureDate>Feb 11, 2018</departureDate>
+    <OrIgInATION>MUA</OrIgInATION>
+    <airlineName>Delta</airlineName>
+    <destination>
+      <airportName>Los Angeles International Airport</airportName>
+      <city>Los Angeles</city>
+      <IATA>LAX</IATA>
+      <latitude>-118.408</latitude>
+      <altitude>125.000</altitude>
+      <longitude>33.943</longitude>
+    </destination>
+  </flight>
+  <flight>
+    <price>300</price>
+    <flightCode>ffee0192</flightCode>
+    <availableSeats>0</availableSeats>
+    <planeType>Boeing 777</planeType>
+    <departureDate>2018-01-20T00:00:00</departureDate>
+    <OrIgInATION>MUA</OrIgInATION>
+    <airlineName>american</airlineName>
+    <destination>
+      <airportName>Los Angeles International Airport</airportName>
+      <city>Los Angeles</city>
+      <IATA>LAX</IATA>
+      <latitude>-118.408</latitude>
+      <altitude>125.000</altitude>
+      <longitude>33.943</longitude>
+    </destination>
+  </flight>
+  <flight>
+    <price>541</price>
+    <flightCode>rree0001</flightCode>
+    <availableSeats>0</availableSeats>
+    <planeType>Boeing 787</planeType>
+    <departureDate>2018-01-20T00:00:00</departureDate>
+    <OrIgInATION>MUA</OrIgInATION>
+    <airlineName>american</airlineName>
+    <destination>
+      <airportName>Los Angeles International Airport</airportName>
+      <city>Los Angeles</city>
+      <IATA>LAX</IATA>
+      <latitude>-118.408</latitude>
+      <altitude>125.000</altitude>
+      <longitude>33.943</longitude>
+    </destination>
+  </flight>
+  <flight>
+    <price>900</price>
+    <flightCode>eefd4511</flightCode>
+    <availableSeats>100</availableSeats>
+    <planeType>Boeing 777</planeType>
+    <departureDate>2018-01-15T00:00:00</departureDate>
+    <OrIgInATION>MUA</OrIgInATION>
+    <airlineName>american</airlineName>
+    <destination>
+      <airportName>Los Angeles International Airport</airportName>
+      <city>Los Angeles</city>
+      <IATA>LAX</IATA>
+      <latitude>-118.408</latitude>
+      <altitude>125.000</altitude>
+      <longitude>33.943</longitude>
+    </destination>
+  </flight>
+  <flight>
+    <airlineName>United</airlineName>
+    <availableSeats>52</availableSeats>
+    <departureDate>2018/02/11</departureDate>
+    <flightCode>ER45if</flightCode>
+    <OrIgInATION>MUA</OrIgInATION>
+    <planeType>Boeing 737</planeType>
+    <price>345.99</price>
+    <destination>
+      <airportName>Los Angeles International Airport</airportName>
+      <city>Los Angeles</city>
+      <IATA>LAX</IATA>
+      <latitude>-118.408</latitude>
+      <altitude>125.000</altitude>
+      <longitude>33.943</longitude>
+    </destination>
+  </flight>
+  <flight>
+    <airlineName>United</airlineName>
+    <availableSeats>12</availableSeats>
+    <departureDate>2018/04/11</departureDate>
+    <flightCode>ER45jd</flightCode>
+    <OrIgInATION>MUA</OrIgInATION>
+    <planeType>Boeing 777</planeType>
+    <price>346</price>
+    <destination>
+      <airportName>Los Angeles International Airport</airportName>
+      <city>Los Angeles</city>
+      <IATA>LAX</IATA>
+      <latitude>-118.408</latitude>
+      <altitude>125.000</altitude>
+      <longitude>33.943</longitude>
+    </destination>
+  </flight>
+  <flight>
+    <airlineName>United</airlineName>
+    <availableSeats>0</availableSeats>
+    <departureDate>2018/06/11</departureDate>
+    <flightCode>ER0945</flightCode>
+    <OrIgInATION>MUA</OrIgInATION>
+    <planeType>Boeing 707</planeType>
+    <price>423</price>
+    <destination>
+      <airportName>Los Angeles International Airport</airportName>
+      <city>Los Angeles</city>
+      <IATA>LAX</IATA>
+      <latitude>-118.408</latitude>
+      <altitude>125.000</altitude>
+      <longitude>33.943</longitude>
+    </destination>
+  </flight>
+</flights>

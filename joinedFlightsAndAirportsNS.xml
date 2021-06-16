@@ -1,0 +1,54 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<flights xmlns="http://acme.com" company="MUA" BU="travel">
+  <fl:flight airline="american" xmlns:fl="http://flights.com" xmlns:ap="http://airports.com">
+    <fl:available-seats>+40.00</fl:available-seats>
+    <fl:airline-name>american</fl:airline-name>
+    <fl:flight-code>AA103</fl:flight-code>
+    <fl:departure-date>apr 11, 2018</fl:departure-date>
+    <fl:plane-type/>
+    <fl:origination>mua</fl:origination>
+    <fl:price>+750.00</fl:price>
+    <fl:destination airportCode="klax">
+      <ap:airport-name>los angeles international airport</ap:airport-name>
+      <ap:city>los angeles</ap:city>
+      <ap:altitude>125</ap:altitude>
+      <ap:icao>klax</ap:icao>
+      <ap:destination airportCode="klax"></ap:destination>
+      <ap:longitude>33.94250107</ap:longitude>
+    </fl:destination>
+  </fl:flight>
+  <fl:flight airline="delta" xmlns:fl="http://flights.com" xmlns:ap="http://airports.com">
+    <fl:available-seats>+18.00</fl:available-seats>
+    <fl:airline-name>delta</fl:airline-name>
+    <fl:flight-code>DL34</fl:flight-code>
+    <fl:departure-date>aug 11, 2018</fl:departure-date>
+    <fl:plane-type>boeing 747</fl:plane-type>
+    <fl:origination>mua</fl:origination>
+    <fl:price>+496.00</fl:price>
+    <fl:destination airportCode="klax">
+      <ap:airport-name>los angeles international airport</ap:airport-name>
+      <ap:city>los angeles</ap:city>
+      <ap:altitude>125</ap:altitude>
+      <ap:icao>klax</ap:icao>
+      <ap:destination airportCode="klax"></ap:destination>
+      <ap:longitude>33.94250107</ap:longitude>
+    </fl:destination>
+  </fl:flight>
+  <fl:flight xmlns:fl="http://flights.com" xmlns:ap="http://airports.com" airline="united">
+    <fl:available-seats>+10.00</fl:available-seats>
+    <fl:airline-name>united</fl:airline-name>
+    <fl:flight-code>UA203</fl:flight-code>
+    <fl:departure-date>feb 11, 2018</fl:departure-date>
+    <fl:plane-type>boeing 737</fl:plane-type>
+    <fl:origination>mua</fl:origination>
+    <fl:price>+199.99</fl:price>
+    <fl:destination airportCode="klax">
+      <ap:airport-name>los angeles international airport</ap:airport-name>
+      <ap:city>los angeles</ap:city>
+      <ap:altitude>125</ap:altitude>
+      <ap:icao>klax</ap:icao>
+      <ap:destination airportCode="klax"></ap:destination>
+      <ap:longitude>33.94250107</ap:longitude>
+    </fl:destination>
+  </fl:flight>
+</flights>

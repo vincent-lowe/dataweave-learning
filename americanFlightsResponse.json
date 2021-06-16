@@ -1,0 +1,67 @@
+[
+  {
+    "ID": 9,
+    "code": "eefd3000",
+    "price": 900,
+    "departureDate": "2018-02-01T00:00:00",
+    "origin": "MUA",
+    "destination": "SFO",
+    "emptySeats": 0,
+    "plane": {
+      "type": "Boeing 737",
+      "totalSeats": 150
+    }
+  },
+  {
+    "ID": 7,
+    "code": "eefd1994",
+    "price": 676,
+    "departureDate": "2018-01-01T00:00:00",
+    "origin": "MUA",
+    "destination": "SFO",
+    "emptySeats": 0,
+    "plane": {
+      "type": "Boeing 777",
+      "totalSeats": 300
+    }
+  },
+  {
+    "ID": 5,
+    "code": "rree1093",
+    "price": 142,
+    "departureDate": "2018-02-11T00:00:00",
+    "origin": "MUA",
+    "destination": "SFO",
+    "emptySeats": 1,
+    "plane": {
+      "type": "Boeing 737",
+      "totalSeats": 150
+    }
+  },
+  {
+    "ID": 8,
+    "code": "ffee2000",
+    "price": 300,
+    "departureDate": "2018-02-20T00:00:00",
+    "origin": "MUA",
+    "destination": "SFO",
+    "emptySeats": 30,
+    "plane": {
+      "type": "Boeing 737",
+      "totalSeats": 150
+    }
+  },
+  {
+    "ID": 11,
+    "code": "rree4567",
+    "price": 456,
+    "departureDate": "2018-01-20T00:00:00",
+    "origin": "MUA",
+    "destination": "SFO",
+    "emptySeats": 100,
+    "plane": {
+      "type": "Boeing 737",
+      "totalSeats": 150
+    }
+  }
+]
