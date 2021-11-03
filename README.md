@@ -14,7 +14,7 @@ Handy links to reading and further study
 - Preserve your best magic here: https://github.com/mulesoft-labs/data-weave-grimoire
 
 
-## Files
+## Sample Data
 
 These data samples, templates, and examples might help.
 To bypass the whole repo and grab just one of the files, choose Raw, and save from your browser. All of the data samples are small and easily handled this way.
