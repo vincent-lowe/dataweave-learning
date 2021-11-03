@@ -16,4 +16,5 @@ Handy links to reading and further study
 
 ## Files
 
-These data samples, templates, and examples might help
+These data samples, templates, and examples might help.
+To bypass the whole repo and grab just one of the files, choose Raw, and save from your browser. All of the data samples are small and easily handled this way.
