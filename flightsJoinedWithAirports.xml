@@ -1,0 +1,174 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<flights>
+  <flight>
+    <available-seats>+40.00</available-seats>
+    <airline-name>delta</airline-name>
+    <flight-code>a134ds</flight-code>
+    <departure-date>apr 11, 2018</departure-date>
+    <destination>
+      <open-flights-airport-id>3484</open-flights-airport-id>
+      <airport-code>lax</airport-code>
+      <airport-name>los angeles international airport</airport-name>
+      <city>los angeles</city>
+      <dst>a</dst>
+      <altitude>125</altitude>
+      <icao>klax</icao>
+      <longitude>33.94250107</longitude>
+    </destination>
+    <plane-type/>
+    <origination>mua</origination>
+    <price>+750.00</price>
+  </flight>
+  <flight>
+    <available-seats>+18.00</available-seats>
+    <airline-name>delta</airline-name>
+    <flight-code>a1qwer</flight-code>
+    <departure-date>aug 11, 2018</departure-date>
+    <destination>
+      <open-flights-airport-id>3484</open-flights-airport-id>
+      <airport-code>lax</airport-code>
+      <airport-name>los angeles international airport</airport-name>
+      <city>los angeles</city>
+      <dst>a</dst>
+      <altitude>125</altitude>
+      <icao>klax</icao>
+      <longitude>33.94250107</longitude>
+    </destination>
+    <plane-type>boeing 747</plane-type>
+    <origination>mua</origination>
+    <price>+496.00</price>
+  </flight>
+  <flight>
+    <available-seats>+10.00</available-seats>
+    <airline-name>delta</airline-name>
+    <flight-code>a1b2c4</flight-code>
+    <departure-date>feb 11, 2018</departure-date>
+    <destination>
+      <open-flights-airport-id>3484</open-flights-airport-id>
+      <airport-code>lax</airport-code>
+      <airport-name>los angeles international airport</airport-name>
+      <city>los angeles</city>
+      <dst>a</dst>
+      <altitude>125</altitude>
+      <icao>klax</icao>
+      <longitude>33.94250107</longitude>
+    </destination>
+    <plane-type>boeing 737</plane-type>
+    <origination>mua</origination>
+    <price>+199.99</price>
+  </flight>
+  <flight>
+    <available-seats>+0.00</available-seats>
+    <airline-name>american</airline-name>
+    <flight-code>ffee0192</flight-code>
+    <departure-date>2018-01-20t00:00:00</departure-date>
+    <destination>
+      <open-flights-airport-id>3484</open-flights-airport-id>
+      <airport-code>lax</airport-code>
+      <airport-name>los angeles international airport</airport-name>
+      <city>los angeles</city>
+      <dst>a</dst>
+      <altitude>125</altitude>
+      <icao>klax</icao>
+      <longitude>33.94250107</longitude>
+    </destination>
+    <plane-type>boeing 777</plane-type>
+    <origination>mua</origination>
+    <price>+300.00</price>
+  </flight>
+  <flight>
+    <available-seats>+0.00</available-seats>
+    <airline-name>american</airline-name>
+    <flight-code>rree0001</flight-code>
+    <departure-date>2018-01-20t00:00:00</departure-date>
+    <destination>
+      <open-flights-airport-id>3484</open-flights-airport-id>
+      <airport-code>lax</airport-code>
+      <airport-name>los angeles international airport</airport-name>
+      <city>los angeles</city>
+      <dst>a</dst>
+      <altitude>125</altitude>
+      <icao>klax</icao>
+      <longitude>33.94250107</longitude>
+    </destination>
+    <plane-type>boeing 787</plane-type>
+    <origination>mua</origination>
+    <price>+541.00</price>
+  </flight>
+  <flight>
+    <available-seats>+100.00</available-seats>
+    <airline-name>american</airline-name>
+    <flight-code>eefd4511</flight-code>
+    <departure-date>2018-01-15t00:00:00</departure-date>
+    <destination>
+      <open-flights-airport-id>3484</open-flights-airport-id>
+      <airport-code>lax</airport-code>
+      <airport-name>los angeles international airport</airport-name>
+      <city>los angeles</city>
+      <dst>a</dst>
+      <altitude>125</altitude>
+      <icao>klax</icao>
+      <longitude>33.94250107</longitude>
+    </destination>
+    <plane-type>boeing 777</plane-type>
+    <origination>mua</origination>
+    <price>+900.00</price>
+  </flight>
+  <flight>
+    <available-seats>+52.00</available-seats>
+    <airline-name>united</airline-name>
+    <flight-code>er45if</flight-code>
+    <departure-date>2018/02/11</departure-date>
+    <destination>
+      <open-flights-airport-id>3484</open-flights-airport-id>
+      <airport-code>lax</airport-code>
+      <airport-name>los angeles international airport</airport-name>
+      <city>los angeles</city>
+      <dst>a</dst>
+      <altitude>125</altitude>
+      <icao>klax</icao>
+      <longitude>33.94250107</longitude>
+    </destination>
+    <plane-type>boeing 737</plane-type>
+    <origination>mua</origination>
+    <price>+345.99</price>
+  </flight>
+  <flight>
+    <available-seats>+12.00</available-seats>
+    <airline-name>united</airline-name>
+    <flight-code>er45jd</flight-code>
+    <departure-date>2018/04/11</departure-date>
+    <destination>
+      <open-flights-airport-id>3484</open-flights-airport-id>
+      <airport-code>lax</airport-code>
+      <airport-name>los angeles international airport</airport-name>
+      <city>los angeles</city>
+      <dst>a</dst>
+      <altitude>125</altitude>
+      <icao>klax</icao>
+      <longitude>33.94250107</longitude>
+    </destination>
+    <plane-type>boeing 777</plane-type>
+    <origination>mua</origination>
+    <price>+346.00</price>
+  </flight>
+  <flight>
+    <available-seats>+0.00</available-seats>
+    <airline-name>united</airline-name>
+    <flight-code>er0945</flight-code>
+    <departure-date>2018/06/11</departure-date>
+    <destination>
+      <open-flights-airport-id>3484</open-flights-airport-id>
+      <airport-code>lax</airport-code>
+      <airport-name>los angeles international airport</airport-name>
+      <city>los angeles</city>
+      <dst>a</dst>
+      <altitude>125</altitude>
+      <icao>klax</icao>
+      <longitude>33.94250107</longitude>
+    </destination>
+    <plane-type>boeing 707</plane-type>
+    <origination>mua</origination>
+    <price>+423.00</price>
+  </flight>
+</flights>
