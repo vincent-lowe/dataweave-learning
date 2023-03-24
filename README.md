@@ -10,10 +10,10 @@ Handy links to reading and further study
 - [DataWeave core library overview](https://docs.mulesoft.com/dataweave/latest/dw-core)
 - [DataWeave Examples (the cookbook)](https://docs.mulesoft.com/dataweave/2.4/dataweave-cookbook)
 - [Understand Tail-call recursion](https://stackoverflow.com/questions/33923/what-is-tail-recursion)
-- HowTo Article - Curried Functions: https://blogs.mulesoft.com/dev-guides/how-to-tutorials/write-curried-functions-in-dataweave/
-- HowTo Article - Using dw::Runtime::try() to armor your code: https://blogs.mulesoft.com/dev-guides/how-to-tutorials/guarding-collections-dataweave-try-function-2/
-- Run DataWeave locally with this CLI: https://github.com/mulesoft-labs/data-weave-native
-- Preserve your best magic here: https://github.com/mulesoft-labs/data-weave-grimoire
+- HowTo Article - [Curried Functions](https://blogs.mulesoft.com/dev-guides/how-to-tutorials/write-curried-functions-in-dataweave/)
+- HowTo Article - [Using dw::Runtime::try() to armor your code](https://blogs.mulesoft.com/dev-guides/how-to-tutorials/guarding-collections-dataweave-try-function-2/)
+- [Run DataWeave locally with this CLI](https://github.com/mulesoft-labs/data-weave-native)
+- [Preserve your best magic here](https://github.com/mulesoft-labs/data-weave-grimoire)
 
 
 ## Sample Data
