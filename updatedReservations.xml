@@ -1,0 +1,116 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<reservations>
+  <reservation>
+    <firstName>John</firstName>
+    <lastName>Wayne </lastName>
+    <pnr>ER13RL</pnr>
+    <passengerPhoneNumber>+** (***) ***-****</passengerPhoneNumber>
+    <homeCountry>USA</homeCountry>
+    <flight code="A134DS">
+      <price>750</price>
+      <availableSeats>50</availableSeats>
+      <!--  <planeType>BOEING 777</planeType> -->
+      <planeType></planeType> 
+      <departureDate>Apr 11, 2018</departureDate>
+      <origination>MUA</origination>
+      <airlineName>Delta</airlineName>
+      <destination>
+        <airportCode>LAX</airportCode>
+        <airportName>Los Angeles International Airport</airportName>
+        <city>Los Angeles</city>
+        <country>United States</country>
+        <IATA>LAX</IATA>
+        <longitude>33.943</longitude>
+        <latitude>-118.408</latitude>
+        <altitude>125</altitude>
+        <timeZone>-8</timeZone>
+        <DST>A</DST>
+        <timeZone>America/Los_Angeles</timeZone>
+      </destination>
+    </flight>
+  </reservation>
+  <reservation>
+    <firstName>Andrea</firstName>
+    <lastName>Schmidt</lastName>
+    <pnr>BYR2RT</pnr>
+    <passengerPhoneNumber>+** (***) ***-****</passengerPhoneNumber>
+    <homeCountry>Germany</homeCountry>
+    <flight code="FFEE0192">
+      <price>300</price>
+      <availableSeats>0</availableSeats>
+      <planeType>Boeing 777</planeType>
+      <departureDate>2018-01-20T00:00:00</departureDate>
+      <origination>MUA</origination>
+      <airlineName>American Airlines</airlineName>
+      <destination>
+        <airportCode>LAX</airportCode>
+        <airportName>Los Angeles International Airport</airportName>
+        <city>Los Angeles</city>
+        <country>United States</country>
+        <IATA>LAX</IATA>
+        <longitude>33.943</longitude>
+        <latitude>-118.408</latitude>
+        <altitude>125</altitude>
+        <timeZone>-8</timeZone>
+        <DST>A</DST>
+        <timeZone>America/Los_Angeles</timeZone>
+      </destination>
+    </flight>
+  </reservation>
+  <reservation>
+    <firstName>Ravindra</firstName>
+    <lastName>Jadeja</lastName>
+    <pnr>JJYRTW</pnr>
+    <passengerPhoneNumber>+** (***) ***-****</passengerPhoneNumber>
+    <homeCountry>India</homeCountry>
+    <flight code="ER0945">
+      <airlineName>United</airlineName>
+      <availableSeats>0</availableSeats>
+      <departureDate>2018/06/11</departureDate>
+      <destination>
+        <airportCode>LAX</airportCode>
+        <airportName>Los Angeles International Airport</airportName>
+        <city>Los Angeles</city>
+        <country>United States</country>
+        <IATA>LAX</IATA>
+        <longitude>33.943</longitude>
+        <latitude>-118.408</latitude>
+        <altitude>125</altitude>
+        <timeZone>-8</timeZone>
+        <DST>A</DST>
+        <timeZone>America/Los_Angeles</timeZone>
+      </destination>
+      <origination>MUA</origination>
+      <planeType>Boeing 707</planeType>
+      <price>423</price>
+    </flight>
+  </reservation>
+  <reservation>
+    <firstName>Kiruba</firstName>
+    <lastName>Munusamy</lastName>
+    <pnr>DL1YAA</pnr>
+    <passengerPhoneNumber>+** (***) ***-****</passengerPhoneNumber>
+    <homeCountry>India</homeCountry>
+    <flight code="A134DS">
+      <price>750</price>
+      <availableSeats>50</availableSeats>
+      <planeType>BOEING 777</planeType>
+      <departureDate>Apr 11, 2018</departureDate>
+      <origination>MUA</origination>
+      <airlineName>Delta</airlineName>
+      <destination>
+        <airportCode>LAX</airportCode>
+        <airportName>Los Angeles International Airport</airportName>
+        <city>Los Angeles</city>
+        <country>United States</country>
+        <IATA>LAX</IATA>
+        <longitude>33.943</longitude>
+        <latitude>-118.408</latitude>
+        <altitude>125</altitude>
+        <timeZone>-8</timeZone>
+        <DST>A</DST>
+        <timeZone>America/Los_Angeles</timeZone>
+      </destination>
+    </flight>
+  </reservation>
+</reservations>
