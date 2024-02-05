@@ -1,0 +1,343 @@
+Anypoint Platform Development: DataWeave 2 - Snippets
+
+* MODULE 1 **********************************************************
+
+** WT 1-1
+Online help and input files for walkthroughs:  http://apdw.cloudhub.io (backup at http://apdw2.cloudhub.io)
+
+Local help page for apdw-flights Mule application: http://localhost:8081
+
+Use online MuleSoft-training-hosted airline flight web services: http://localhost:8081/flights?code=LAX&airline=al&mock=false
+
+Test deployment link: http://localhost:8081/flights?code=LAX&airline=all
+
+** WT 1-2: 
+
+Access the DataWeave Playground: http://dwlang.fun 
+
+Access input data file online: http://apdw.cloudhub.io/getData?file=examples/joinedFlightsAndAirportsNS.xml
+
+Alternative way to set the flightsPayload input variable:
+
+var flightsPayload = 
+readUrl("http://apdw.cloudhub.io/getData?file=examples/joinedFlightsAndAirportsNS.xml"
+,
+"application/xml")
+
+
+output application/json 
+--- 
+readUrl( "classpath://flightsToLAX.json", 
+"application/json") 
+
+* MODULE 2 **********************************************************
+
+** WT 2-4:
+
+* FlightsLib.dwl: *
+
+fun combineScatterGatherResults( theInput ) =
+flights: flatten(  theInput..flights )
+
+* Transform Message: *
+
+%dw 2.0
+import dw::modules::FlightsLib
+---
+FlightsLib::combineScatterGatherResults( payload )
+
+
+
+** Referenced in WTs
+
+* ComplexData.dwl: *
+
+fun combineScatterGatherResults( theInput ) =
+flatten ( theInput..payload ) orderBy $.price
+
+
+
+fun buildJsonObject( objectArray: Array<Object>, parentTag: String ) =
+{( 
+   objectArray map (element, index) -> {
+      ( parentTag ++ index ): element
+   }
+)}
+
+
+
+
+
+
+* MODULE 3 **********************************************************
+** WT 3.1: 
+
+* Transform Message *
+
+fun processByType( anInput ) =
+anInput match {
+    case is Array -> "input is an Array of size $(sizeOf(anInput))"
+    case is Object -> (inputType: "Object") ++ anInput
+    //case "SFO" -> "San Francisco"
+    case is Number -> $ as String {format: "#,###.00"} as Number
+    else -> "input " ++ anInput ++ " is of type " ++ typeOf( anInput )
+}
+
+* MODULE 4 **********************************************************
+** WT 4.1: 
+
+var array1 = [1, "a", true]
+
+var object1 = {
+    one: "one1",
+    two: "two2"
+}
+
+** WT 4.3:
+
+var array2  = [
+	objOne: object1,
+	objTwo: object1
+]
+
+
+
+* MODULE 5 **********************************************************
+** WT 5.1: 
+
+* Transform Message *
+
+fun flightsJoinedWithAirportInfo(payload) =
+payload.flights map (flight) ->
+flight 
+++ 
+{airportCode: flight.destination} ++
+ 
+airportInfo:
+  {airportCode: flight.destination} 
+  ++ 
+  airportDetails[flight.destination][0]
+  - "openFlightsAirportId" - "type" - "source"
+
+
+** WT 5.2: 
+
+* FlightsLib.dwl: *
+fun buildXmlObject( objectArray, parentTag ) =
+{ 
+  (dw::core::Strings::pluralize(parentTag))  : {( 
+    objectArray map (element) -> {
+      (parentTag): element
+    }
+  )}
+}
+
+
+
+fun buildJsonObject(objectArray, parentTag) =
+{( 
+  objectArray map (element, index) -> {
+    ( parentTag ++ index ): element
+  }
+)}
+
+
+* Transform Message *
+
+fun flightsJoinedWithAirportInfoV2(payload) =
+payload.flights as Array map  (flight, index) -> 
+//"flight$(index)": 
+flight mapObject (value,key) ->
+    key match {
+     	case "destination" -> joinAirportDetails(flight)
+       else -> { (key): value }
+    }
+
+
+fun joinAirportDetails(flight) =
+destination: (
+  {airportCode: flight.destination} 
+  ++ 
+  (
+    filterDetailsKeys(
+      airportDetails[flight.destination][0],
+      flightKeysToDelete
+    ) 
+  )
+) 
+
+fun filterDetailsKeys( detailsObject, keysArray ) =
+detailsObject mapObject ( (destValue, destKey) -> 
+    if ( keysArray contains (destKey as String) ) {}
+    else { (destKey): destValue }
+)
+
+
+** WT 5.3:
+
+import dw::modules::ComplexData
+
+var passengerRecords = readUrl("classpath://passengerRecords.csv", "application/csv")
+
+var joinedPassengerAndFlights  = 
+dw::core::Arrays::join(
+    passengerRecords as Array<Object>,
+    flightsWithDetails..*flight as Array<Object>,
+    (pass) ->  pass."Flight Code",
+    (flight) -> flight.flightCode
+)
+
+
+fun combineJoinResult(joinResult) = 
+joinResult map (e,i) -> 
+//e.l ++ e.r
+e.l - "Flight Code" ++ {flight @(code: e.r.flightCode):( e.r )}
+
+
+
+//fun buildJsonObject( objectArray, parentTag) =
+fun buildJsonObject( objectArray: Array<Object>, parentTag: String ) =
+{( 
+   objectArray map (element, index) -> {
+      ( parentTag ++ index ): element
+   }
+)}
+
+
+
+---
+ComplexData::buildXmlObject(
+	combineJoinResult(joinedPassengerAndFlights),
+	"reservation"
+)
+
+** WT 6.1:
+
+var reservationsXml = 
+ComplexData::buildXmlObject(
+	combineJoinResult(joinedPassengerAndFlights),
+	"reservation"
+)
+
+var destPath = "reservations.reservation.flight.destination.longitude"
+
+
+import * from dw::core::Strings
+
+fun formatKeys( anObject ) =
+anObject mapObject (v,k,i) ->
+(camelize(underscore(k))): v
+
+
+fun formatKeys( anObject ) =
+anObject mapObject (v,k,i) -> k match{
+    case "flight" -> ( camelize( underscore (k) ))
+        @( 
+            ( { code: upper(  k.@.code ) } ) //build new attributes from k.@
+        ): v - "flightCode"
+    case  "flightCode" -> {}
+    else -> ( camelize( underscore(k) ) ) 
+       @( (k.@) ) : v
+}
+
+
+
+(
+reservationsXml 
+update {
+  case long at .reservations.*reservation.*flight.destination.longitude -> 
+ long as Number as String {format: "###.000"} 
+  case lat at .reservations.*reservation.*flight.*destination.latitude -> 
+ lat as Number as String {format: "###.000"} 
+   case congestion at .reservations.*reservation.flight.*destination.*status! 
+    -> 
+ "Moderate Traffic"
+
+  //case dest at .reservations.*reservation.*flight.*destination -> dest
+}
+update {
+	 case dest at .reservations.*reservation.*flight.*destination -> dest - "ICAO"
+}
+update {
+	 case res at .reservations.*reservation -> formatKeys( res ) 
+}
+dw::util::Values::mask "passengerPhoneNumber" with "+** (***) ***-****"
+//dw::util::Values::mask "status" with "Delays - Cause: fog"	
+)
+
+
+
+
+** WT 6.2:
+
+
+fun formatDataStructure( anyInput ) =
+ anyInput match {
+ 	case is Null -> ""
+ 	case is Array -> anyInput map formatDataStructure($)
+ 	case is Object -> anyInput mapObject (value, key ) ->  
+	    { ( formatDataStructure(key) ) : formatDataStructure(value) }
+	case aKey is Key -> dw::core::Strings::camelize(trim(aKey))
+case is String -> lower( anyInput ) 
+ 	case is Number -> anyInput as String {format: "+#,##0.00;-#"}
+ 	else -> anyInput
+ }
+
+
+
+fun formatDataStructure( anyInput ) =
+anyInput match {
+    case is Null -> ""
+    case is Array -> anyInput map formatDataStructure($)
+    case is Object -> anyInput mapObject (value, key ) ->  
+        { ( formatDataStructure(key) ) @( ( key.@ ) ) : formatDataStructure(value) }
+    case aKey is Key -> camelize( underscore ( trim( aKey) ) )
+    case is String -> lower( anyInput ) 
+    case is Number -> anyInput as String {format: "+#,##0.00;-#"}
+    else -> anyInput
+ }
+
+
+ 
+
+fun shuffledDataStructure( payload ) = 
+do 
+{
+    var shuffledParent = flightsJoinedWithAirportInfoV2(payload) 
+    map (flight) -> shuffleObject( flight, [2,6,1,4,7,3,5,0] )
+    ---
+    buildXmlObject( shuffledParent, "flight" )
+}
+
+---
+formatDataStructure(shuffledDataStructure(payload))
+
+
+** WT 7.3:
+
+fun deltaFlightsKpis(flightsInput : Array) = 
+flightsInput reduce (
+  ( flight, 
+    acc = { delta: {count: 0, sumOfPrices: 0} } 
+  ) ->
+  flight.airlineName match {
+    case delta if(lower(delta) contains "del") -> 
+      delta: {
+        sumOfPrices: acc.delta.sumOfPrices + flight.price,
+        count: acc."delta".count + 1
+      }
+    else -> acc
+  }
+)
+
+---
+do {
+  var deltaStats = deltaFlightsKpis( joinedFlights  )
+  var aveDeltaPrice = round(
+    (deltaStats..sumOfPrices[0] as Number) / (deltaStats..count[0] as Number ) 
+  ) 
+    as String {format: "#,###"} as Number
+  ---	
+  aveDeltaPrice
+} 
+
