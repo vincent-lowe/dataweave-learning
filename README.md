@@ -15,8 +15,9 @@ Vital Docs
 
 Further Reading
 
-- HowTo Article - [Curried Functions](https://blogs.mulesoft.com/dev-guides/how-to-tutorials/write-curried-functions-in-dataweave/)
 - HowTo Article - [Using dw::Runtime::try() to armor your code](https://blogs.mulesoft.com/dev-guides/how-to-tutorials/guarding-collections-dataweave-try-function-2/)
+- [Selectors vs. Functions: Performance](https://www.prostdev.com/post/exposing-dataweave-map-filter-vs-reduce-which-is-faster#google_vignette)
+- HowTo Article - [Curried Functions](https://blogs.mulesoft.com/dev-guides/how-to-tutorials/write-curried-functions-in-dataweave/)
 - [The Importance of Style](https://techwhine.panreality.com/2024/08/15/reading-the-code/)
 - [Understand Tail-call recursion](https://stackoverflow.com/questions/33923/what-is-tail-recursion)
 
